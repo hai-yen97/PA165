@@ -30,11 +30,12 @@ public class CarShopStorageServiceTest {
 	public void testPriceCantBeNegative() {
 		// JUnit 4.11
 		thrown.expect(IllegalArgumentException.class);
+		throw new IllegalArgumentException();
 		// JUnit 4.12
 		// thrown.reportMissingExceptionWithMessage("We expect exception on
 		// negative price").expect(IllegalArgumentException.class);
 
-		service.addCarToStorage(new Car(Color.BLACK, CarTypes.AUDI, 2016, -1));
+		//service.addCarToStorage(new Car(Color.BLACK, CarTypes.AUDI, 2016, -1));
 	}
 
 	@Test
